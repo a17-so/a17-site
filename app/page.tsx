@@ -3,19 +3,11 @@
 import Image from "next/image";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { toast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 
 
 export default function Home() {
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Thank you for your interest",
-      description: "We'll be in touch shortly about the private beta.",
-    });
-  };
+
 
   return (
    <div className="flex flex-col min-h-screen sm:p-20 font-[family-name:var(--font-geist-sans)] scroll-smooth">
