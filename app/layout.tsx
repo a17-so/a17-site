@@ -13,10 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const jetbrainsMono = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "a17 - rethinking consumer",
