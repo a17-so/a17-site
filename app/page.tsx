@@ -4,24 +4,34 @@ import Image from "next/image";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
-
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function Home() {
+  const [email, setEmail] = useState('');
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log("Email submitted:", email);
+    toast.success("Thanks for joining the waitlist!");
+    setEmail('');
+  };
 
   return (
-   <div className="flex flex-col min-h-screen sm:p-20 font-[family-name:var(--font-geist-sans)] scroll-smooth">
+   <div className="flex flex-col min-h-screen sm:p-20 font-[family-name:var(--font-geist-sans)] scroll-smooth overflow-x-hidden">
    <main className="flex flex-col items-center text-center gap-12 w-full flex-grow justify-start min-h-screen">
      <div className="flex flex-col justify-center min-h-screen w-full">
         {/* Header Section */}
-        <motion.pre 
-          className="font-mono mr-6" 
-          style={{ fontFamily: 'monospace' }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-        {`
+        <div className="w-full overflow-x-auto">
+          <motion.pre 
+            className="font-mono text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] whitespace-pre overflow-x-auto"
+            style={{ fontFamily: 'monospace' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            {`
                               111111      7777777777777777777
                              1::::::1    7::::::::::::::::::7
                             1:::::::1   7::::::::::::::::::7
@@ -39,8 +49,9 @@ export default function Home() {
           a::::::::::aa:::a 1::::::::::1 7::::::7           
             aaaaaaaaaaaaaaa  11111111111 77777777            
                                                  
-          `}
-        </motion.pre>
+            `}
+          </motion.pre>
+        </div>
 
         
         
@@ -223,12 +234,15 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+            onSubmit={handleSubmit}
           >
             <Input
               type="email"
               placeholder="Enter your email"
-              className="bg-secondary border-0"
+              className="bg-secondary"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <Button type="submit" className="bg-white text-black shrink-0">
               Send
