@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Account:</strong> A unique account created for you to access our Service.</li>
               <li><strong>Affiliate:</strong> An entity under common control with our Company.</li>
               <li><strong>Application:</strong> Software provided by the Company.</li>
-              <li><strong>Company:</strong> SWIFT LABS LLC.</li>
+              <li><strong>Company:</strong> a17 studios LLC</li>
               <li><strong>Country:</strong> Washington, United States.</li>
               <li><strong>Device:</strong> Any device used to access the Service.</li>
               <li><strong>Personal Data:</strong> Information identifying an individual.</li>
