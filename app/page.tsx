@@ -325,8 +325,46 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
+
       </main>
 
+
+      <footer className="flex flex-col items-center justify-center w-full h-24 bg-black text-white">
+      <motion.div 
+          className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+        >
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/terms-of-service"
+        >
+          <Image
+            className="invert"
+            aria-hidden
+            src="/portfolio.svg"
+            alt="Portfolio icon"
+            width={16}
+            height={16}
+          />
+          terms of service
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/privacy-policy"
+        >
+          <Image
+            className="invert"
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          privacy policy
+        </a>
+        </motion.div>
+      </footer>
     
     </div>
   );
