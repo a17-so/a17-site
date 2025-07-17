@@ -111,7 +111,7 @@ export default function Home() {
 
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://x.com/ChebiumAbhay"
+            href="https://x.com/abhayscalez"
             target="_blank"
             rel="noopener noreferrer"
           >
