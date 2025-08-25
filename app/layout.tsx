@@ -1,38 +1,75 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from '@vercel/analytics/next';
-import { Toaster } from "sonner";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+import "../global.css";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
+import { Metadata } from "next";
+import { Analytics } from "../components/analytics";
 
 export const metadata: Metadata = {
-  title: "a17 - rethinking consumer",
-  description: "The innovation lab rethinking iconic consumer products",
+  title: {
+    default: "a17",
+    template: "%s | a17.so",
+  },
+  description: "the consumer everything company",
+  openGraph: {
+    title: "a17",
+    description:
+      "the consumer everything company",
+    url: "https://a17.so",
+    siteName: "a17.so",
+    images: [
+      {
+        url: "https://a17.so/og.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "a17.so",
+    card: "summary_large_image",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const calSans = LocalFont({
+  src: "../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+      <head>
+        <Analytics />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+          }`}
       >
         {children}
-        <Analytics />
-        <Toaster />
       </body>
     </html>
   );

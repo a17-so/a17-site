@@ -1,131 +1,124 @@
-// app/privacy-policy/page.tsx
+import type { Metadata } from "next";
+import Link from "next/link";
+import Particles from "../../components/particles";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | A17 Labs LLC",
+  description: "Privacy Policy for A17 Labs LLC",
+};
 
 export default function PrivacyPolicyPage() {
-    return (
-      <main className="max-w-3xl mx-auto px-4 py-12 font-[family-name:var(--font-geist-sans)]">
-        <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 mb-8">Last updated: March 12, 2025</p>
-  
-        <Section title="Introduction">
-          <p>
-            This Privacy Policy outlines our policies and practices regarding the collection, use,
-            and disclosure of your information when you use our service. It also informs you about
-            your privacy rights and how legal protections apply to you. By using our service, you
-            consent to the collection and use of information in accordance with this Privacy Policy.
-          </p>
-        </Section>
-  
-        <Section title="Interpretation and Definitions">
-          <SubSection title="Interpretation">
-            <p>
-              Words with capitalized initial letters have meanings defined under the following
-              conditions. These definitions apply equally in singular and plural form.
+  return (
+    <div className="min-h-screen w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <Particles className="absolute inset-0 -z-10" quantity={80} />
+
+      <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+        <div className="mb-10">
+          <Link
+            href="/"
+            className="text-sm text-zinc-400 hover:text-zinc-200 duration-200"
+          >
+            ← Back to home
+          </Link>
+        </div>
+
+        <h1 className="text-4xl sm:text-5xl text-zinc-100">Privacy Policy</h1>
+        <p className="mt-3 text-sm text-zinc-500">Effective: August 25, 2025</p>
+
+        <div className="mt-10 space-y-8 text-zinc-300">
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Overview</h2>
+            <p className="mt-3">
+              This Privacy Policy explains how A17 Labs LLC ("A17 Labs", "we", "us")
+              collects, uses, and shares information about you when you use our
+              websites, apps, and services (collectively, the "Services").
             </p>
-          </SubSection>
-          <SubSection title="Definitions">
-            <ul className="list-disc list-inside space-y-1">
-              <li><strong>Account:</strong> A unique account created for you to access our Service.</li>
-              <li><strong>Affiliate:</strong> An entity under common control with our Company.</li>
-              <li><strong>Application:</strong> Software provided by the Company.</li>
-              <li><strong>Company:</strong> a17 studios LLC</li>
-              <li><strong>Country:</strong> Washington, United States.</li>
-              <li><strong>Device:</strong> Any device used to access the Service.</li>
-              <li><strong>Personal Data:</strong> Information identifying an individual.</li>
-              <li><strong>Service:</strong> The website or application operated by us.</li>
-              <li><strong>Service Provider:</strong> A third party that processes data for us.</li>
-              <li><strong>Usage Data:</strong> Data collected automatically when using the Service.</li>
-              <li><strong>You:</strong> The individual or entity using the Service.</li>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Information We Collect</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>
+                Usage data: interactions with our Services, device and browser
+                information, approximate location, and diagnostics.
+              </li>
+              <li>
+                Account data: profile details you provide when you create or
+                update an account.
+              </li>
+              <li>
+                Communications: messages you send to us (for example, support
+                requests).
+              </li>
             </ul>
-          </SubSection>
-        </Section>
-  
-        <Section title="Collecting and Using Your Personal Data">
-          <SubSection title="Types of Data Collected">
-            <p>We may collect the following types of personal data:</p>
-            <ul className="list-disc list-inside space-y-1">
-              <li>Full Name</li>
-              <li>Email Address</li>
-              <li>Contact Details</li>
-              <li>Payment Information</li>
-              <li>Face Data (with explicit consent)</li>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">How We Use Information</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>Provide, maintain, and improve the Services.</li>
+              <li>Personalize experiences and develop new features.</li>
+              <li>Communicate with you about updates, security, and support.</li>
+              <li>Detect, prevent, and respond to fraud, abuse, and security issues.</li>
+              <li>Comply with legal obligations.</li>
             </ul>
-          </SubSection>
-          <SubSection title="Face Data Details">
-            <p>
-              We process face data for specific features with your explicit consent. It is deleted
-              after use and not shared unless required for trusted third-party processing like OpenAI.
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Sharing</h2>
+            <p className="mt-3">
+              We may share information with vendors and service providers who
+              help us operate the Services; when required by law or to protect
+              rights and safety; or with your consent. We do not sell your
+              personal information.
             </p>
-          </SubSection>
-        </Section>
-  
-        <Section title="Security Measures">
-          <p>
-            We use encryption, firewalls, and secure servers to protect your data. While we strive to
-            protect your information, we cannot guarantee absolute security.
-          </p>
-        </Section>
-  
-        <Section title="User Generated Contributions">
-          <p>
-            By submitting content, you warrant that you have all rights and permissions. You retain
-            ownership of your contributions, but grant us the right to use feedback freely.
-          </p>
-        </Section>
-  
-        <Section title="Usage Data">
-          <p>
-            We collect data like IP address, browser type, visited pages, and cookies to analyze and
-            improve our services.
-          </p>
-        </Section>
-  
-        <Section title="Legal Basis for Processing Personal Data">
-          <ul className="list-disc list-inside space-y-1">
-            <li>User Consent</li>
-            <li>Contractual Necessity</li>
-            <li>Legal Obligation</li>
-            <li>Legitimate Interests</li>
-          </ul>
-        </Section>
-  
-        <Section title="User Rights and Control Over Data">
-          <ul className="list-disc list-inside space-y-1">
-            <li>Right to Access</li>
-            <li>Right to Rectification</li>
-            <li>Right to Erasure</li>
-            <li>Right to Object</li>
-            <li>Right to Data Portability</li>
-            <li>Right to Withdraw Consent</li>
-            <li>Right to Non-Discrimination</li>
-          </ul>
-          <p>Contact us at <a href="mailto:team@a17.so" className="text-blue-600 underline">team@a17.so</a> to exercise these rights.</p>
-        </Section>
-  
-        <Section title="Retention and Security of Personal Data">
-          <p>
-            We retain personal data only as long as necessary. Industry-standard security measures are
-            in place to protect your data.
-          </p>
-        </Section>
-      </main>
-    );
-  }
-  
-  function Section({ title, children }: { title: string; children: React.ReactNode }) {
-    return (
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-2">{title}</h2>
-        <div className="space-y-2">{children}</div>
-      </section>
-    );
-  }
-  
-  function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
-    return (
-      <div className="mb-4">
-        <h3 className="text-lg font-medium">{title}</h3>
-        <div className="ml-4">{children}</div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Data Retention</h2>
+            <p className="mt-3">
+              We retain information for as long as necessary to provide the
+              Services, comply with legal obligations, resolve disputes, and
+              enforce our agreements.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Your Choices</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>Access, update, or delete certain account information.</li>
+              <li>Control communications by adjusting your settings or opting out.</li>
+              <li>Manage cookie and device permissions at the system level.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Childrens Privacy</h2>
+            <p className="mt-3">
+              Our Services are not directed to children under 13, and we do not
+              knowingly collect personal information from children under 13.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Changes to This Policy</h2>
+            <p className="mt-3">
+              We may update this Privacy Policy from time to time. We will post
+              the updated version on this page with a new effective date.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Contact</h2>
+            <p className="mt-3">
+              Questions or concerns? Visit our <Link href="/support" className="underline underline-offset-4">Support</Link> page.
+            </p>
+          </section>
+        </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
+
+
+
