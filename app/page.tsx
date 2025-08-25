@@ -80,7 +80,7 @@ export default function Home() {
           </h2>
 
           <h2 className="text-sm text-zinc-700">
-            apply to join us <span className="italic">here</span>.
+            apply to join us <a href="mailto:abhay@a17.so" className="italic underline">here</a>.
           </h2>
 
         </div>
