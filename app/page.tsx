@@ -4,7 +4,7 @@ import Particles from "../components/particles";
 
 const navigation = [
   { name: "abhay ->", href: "https://x.com/abhaychebium" },
-  { name: "advaith ->", href: "https://x.com/adscalez" },
+  { name: "advaith ->", href: "https://x.com/advaithakella" },
 ];
 
 export default function Home() {
@@ -38,18 +38,23 @@ export default function Home() {
         <div className="flex flex-col space-y-2">
 
           <h2 className="text-sm text-zinc-300">
-            the consumer everything company. starting with apps.
-          </h2>
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-          <h2 className="text-sm text-zinc-300">
-            {" "}
+            the &nbsp;<span className="italic text-zinc-200 font-bold text-md">consumer</span>&nbsp;&nbsp;&nbsp;everything company. starting with apps.
           </h2>
 
           <h2 className="text-sm text-zinc-300">
-            we build, scale and acquire consumer products succesfully by injecting ourselves into the cultural zeitgeist.
+            {" "}
           </h2>
+          <h2 className="text-sm text-zinc-300">
+            {" "}
+          </h2>
+          
+
+          <h2 className="text-sm text-zinc-300">
+            we build, scale & acquire &nbsp;
+            <span className="italic text-zinc-200 font-bold text-md">consumer</span>
+            &nbsp;&nbsp;&nbsp;internet companies.
+          </h2>
+
 
 
           <h2 className="text-sm text-zinc-300">
