@@ -50,6 +50,12 @@ export default function PrivacyPolicyPage() {
                 Communications: messages you send to us (for example, support
                 requests).
               </li>
+              <li>
+                Face data: when you upload a selfie within our apps, we collect
+                that image to provide AI-powered features such as makeup
+                predictions. We do not collect biometric identifiers or perform
+                facial recognition.
+              </li>
             </ul>
           </section>
 
@@ -61,6 +67,36 @@ export default function PrivacyPolicyPage() {
               <li>Communicate with you about updates, security, and support.</li>
               <li>Detect, prevent, and respond to fraud, abuse, and security issues.</li>
               <li>Comply with legal obligations.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Face Data</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-6">
+              <li>
+                <strong>Collection:</strong> We only collect the selfies you choose
+                to upload into the app. No additional biometric or facial
+                recognition data is collected.
+              </li>
+              <li>
+                <strong>Retention:</strong> Your selfies are retained until you
+                delete your account. Once deleted, your selfies are permanently
+                removed.
+              </li>
+              <li>
+                <strong>Use:</strong> Selfies are only used internally to provide
+                AI-powered makeup prediction and related features.
+              </li>
+              <li>
+                <strong>Sharing:</strong> Selfies may be processed through AI models
+                (such as OpenAI and Gemini) that are integrated into our own
+                servers and code. These models do not store your selfies, and the
+                data is not retained by OpenAI or Gemini.
+              </li>
+              <li>
+                <strong>No sale:</strong> We do not sell or disclose your selfies
+                to advertisers or unrelated third parties.
+              </li>
             </ul>
           </section>
 
@@ -93,7 +129,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-zinc-100">Childrens Privacy</h2>
+            <h2 className="text-xl font-semibold text-zinc-100">Children’s Privacy</h2>
             <p className="mt-3">
               Our Services are not directed to children under 13, and we do not
               knowingly collect personal information from children under 13.
@@ -111,7 +147,14 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Contact</h2>
             <p className="mt-3">
-              Questions or concerns? Visit our <Link href="/support" className="underline underline-offset-4">Support</Link> page.
+              Questions or concerns? Visit our{" "}
+              <Link
+                href="/support"
+                className="underline underline-offset-4"
+              >
+                Support
+              </Link>{" "}
+              page.
             </p>
           </section>
         </div>
@@ -119,6 +162,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-
-
-
