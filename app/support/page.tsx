@@ -57,7 +57,7 @@ export default function SupportPage() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="h-11 bg-zinc-900/60 text-zinc-100 placeholder:text-zinc-400 border-zinc-700/60"
+              className="h-11 bg-zinc-900/60 text-zinc-100 placeholder:text-zinc-400 border-zinc-700/60 rounded-xl"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function SupportPage() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="h-11 bg-zinc-900/60 text-zinc-100 placeholder:text-zinc-400 border-zinc-700/60"
+              className="h-11 bg-zinc-900/60 text-zinc-100 placeholder:text-zinc-400 border-zinc-700/60 rounded-xl"
             />
           </div>
 
@@ -87,11 +87,11 @@ export default function SupportPage() {
               onChange={handleChange}
               required
               rows={6}
-              className="placeholder:text-zinc-400 selection:bg-primary selection:text-primary-foreground w-full min-w-0 rounded-md border bg-zinc-900/60 border-zinc-700/60 text-zinc-100 px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive"
+              className="placeholder:text-zinc-400 selection:bg-primary selection:text-primary-foreground w-full min-w-0 rounded-xl border bg-zinc-900/60 border-zinc-700/60 text-zinc-100 px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive"
             />
           </div>
 
-          <Button type="submit" size="lg" className="bg-white text-black hover:bg-white/90 h-12">
+          <Button type="submit" size="lg" className="rounded-full bg-white text-black hover:bg-white/90 h-12">
             Submit
           </Button>
         </form>
