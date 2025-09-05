@@ -21,7 +21,7 @@ export default function AffiliatePage() {
     // Send notification to Discord
     const discordMessage = {
       embeds: [{
-        title: "🎯 New Affiliate Application!",
+        title: "🎯 New A17 Creator Network Application!",
         color: 0x00ff00, // Green color
         fields: [
           { 
@@ -42,7 +42,7 @@ export default function AffiliatePage() {
         ],
         timestamp: new Date().toISOString(),
         footer: {
-          text: "Affiliate Network Application"
+          text: "A17 Creator Network Application"
         }
       }]
     }
@@ -94,8 +94,8 @@ export default function AffiliatePage() {
           </Link>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl text-zinc-100">Apply to the Affiliate Network!</h1>
-        <p className="mt-3 text-sm text-zinc-500">Join our affiliate program and start earning with us.</p>
+        <h1 className="text-4xl sm:text-5xl text-zinc-100">Apply to the A17 Creator Network</h1>
+        <p className="mt-3 text-sm text-zinc-500">Join our creator network and start earning with us.</p>
         
         <div className="mt-6 mb-8">
           <p className="text-sm text-zinc-400 mb-2">Join our community:</p>
