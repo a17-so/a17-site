@@ -4,8 +4,14 @@ import * as React from "react";
 
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
-import { Card } from "@/components/card";
+import { Card as BaseCard } from "@/components/card";
 import Particles from "@/components/particles";
+import { cn } from "@/util/utils";
+import { PropsWithChildren } from "react";
+
+const Card: React.FC<PropsWithChildren<{ className?: string }>> = ({ className, ...props }) => (
+  <BaseCard className={cn("border-zinc-800 hover:border-zinc-500/60", className)} {...props} />
+);
 
 function formatCurrency(value: number) {
   if (Number.isNaN(value) || !Number.isFinite(value)) return "$0";
