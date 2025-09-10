@@ -29,7 +29,7 @@ function formatNumber(value: number) {
 
 export default function CalculatorPage() {
   const [form, setForm] = React.useState({
-    avgViews: "57000",
+    avgViews: "50000",
     posts: "4",
     downloadRate: "2",
     paymentRate: "2",
@@ -67,18 +67,14 @@ export default function CalculatorPage() {
 
   return (
     <div className="min-h-screen w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <Particles className="absolute inset-0 -z-10" quantity={80} />
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 py-16 md:py-24">
-        <h1 className="text-center text-4xl text-zinc-100 font-medium tracking-tight md:text-5xl">
-          Influencer Deal Calculator
-        </h1>
+      <div className="mx-auto flex w-full max-w-6xl flex-col px-6 py-16 md:py-24">
 
         {/* Screen 1: Inputs */}
-        <section className="min-h-screen flex flex-col items-center justify-center gap-8">
+        <section className="min-h-screen flex flex-col items-center justify-start gap-8 pt-0 md:pt-2">
           <h2 className="text-2xl text-zinc-100 font-medium md:text-3xl">Enter Inputs</h2>
           <div className="w-full max-w-2xl">
             <Card>
-              <div className="p-6 md:p-8">
+              <div className="pt-4 pb-6 px-6 md:pt-6 md:pb-8 md:px-8">
                 <form className="space-y-6 text-zinc-300">
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div className="space-y-2 max-w-lg">
@@ -128,7 +124,7 @@ export default function CalculatorPage() {
                     </div>
                     <div className="space-y-2 max-w-lg">
                       <label htmlFor="paymentRate" className="text-sm text-zinc-400">
-                        Payment Rate (%)
+                        Conversion Rate (%)
                       </label>
                       <Input
                         type="text"
@@ -184,55 +180,55 @@ export default function CalculatorPage() {
         </section>
 
         {/* Screen 2: Results */}
-        <section id="results" className="min-h-screen flex flex-col gap-16 justify-center">
-          <div className="grid grid-cols-1 gap-12 xl:grid-cols-3">
+        <section id="results" className="min-h-screen flex flex-col justify-start">
+          <div className="flex flex-col space-y-40 lg:space-y-56">
             {/* Deal Cost */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-center text-2xl text-zinc-100 font-medium">Deal Cost</h2>
-              <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-3 text-center">
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{`$${cpm} (${cpmRate.toFixed(3)})`}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">CPM</div></div></Card>
-                <div className="text-3xl text-zinc-100">×</div>
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatNumber(avgViews)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Average Views</div></div></Card>
-                <div className="text-3xl text-zinc-100">×</div>
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatNumber(posts)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Posts per month</div></div></Card>
-                <div className="text-3xl text-zinc-100">=</div>
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatCurrency(payout)}/mo<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">PAYOUT</div></div></Card>
+              <h2 className="text-center text-xl sm:text-2xl text-zinc-100 font-medium">Deal Cost</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-3 text-center">
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{`$${cpm} (${cpmRate.toFixed(3)})`}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">CPM</div></div></Card>
+                <div className="text-2xl sm:text-3xl text-zinc-100">×</div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(avgViews)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Average Views</div></div></Card>
+                <div className="text-2xl sm:text-3xl text-zinc-100">×</div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(posts)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Posts per month</div></div></Card>
+                <div className="text-2xl sm:text-3xl text-zinc-100">=</div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(payout)}/mo<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">PAYOUT</div></div></Card>
               </div>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatCurrency(dueNow)}/mo<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Due now (20%)</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatCurrency(payout)}/mo<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">End of the month</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(mvc)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">MVC</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(dueNow)}/mo<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Due now (20%)</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(payout)}/mo<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">End of the month</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(mvc)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">MVC</div></div></Card>
               </div>
             </div>
 
             {/* Breakdown */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-center text-2xl text-zinc-100 font-medium">Breakdown</h2>
+              <h2 className="text-center text-xl sm:text-2xl text-zinc-100 font-medium">Breakdown</h2>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(avgViews)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Average Views</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(posts)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Videos per deal</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalViews)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed views</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalViews)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed views</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{downloadRate}%<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Standard download rate</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalDownloads)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed downloads</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalDownloads)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed downloads</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{paymentRate}%<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Standard conversion rate</div></div></Card>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalPayingUsers)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed paying users</div></div></Card>
-                <div className="md:col-span-2"><Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatNumber(totalPayingUsers)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Total guaranteed paying users</div></div></Card></div>
-                <Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatCurrency(arpu)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Money we make per subscription</div></div></Card>
-                <div className="md:col-span-3"><Card><div className="px-4 py-5 text-center text-xl font-semibold text-zinc-100">{formatCurrency(revenue)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Revenue made</div></div></Card></div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(avgViews)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Average Views</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(posts)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Videos per deal</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalViews)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed views</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalViews)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed views</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{downloadRate}%<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Standard download rate</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalDownloads)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed downloads</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalDownloads)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed downloads</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{paymentRate}%<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Standard conversion rate</div></div></Card>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalPayingUsers)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed paying users</div></div></Card>
+                <div className="md:col-span-2"><Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatNumber(totalPayingUsers)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Total guaranteed paying users</div></div></Card></div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(arpu)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Money we make per subscription</div></div></Card>
+                <div className="md:col-span-3"><Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-center text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(revenue)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Revenue made</div></div></Card></div>
               </div>
             </div>
 
             {/* Profit */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-center text-2xl text-zinc-100 font-medium">Profit Made</h2>
-              <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4 text-center">
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatCurrency(revenue)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Revenue Made</div></div></Card>
-                <div className="text-3xl text-zinc-100">-</div>
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatCurrency(payout)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Cost of the deal</div></div></Card>
-                <div className="text-3xl text-zinc-100">=</div>
-                <Card><div className="px-4 py-5 text-xl font-semibold text-zinc-100">{formatCurrency(profit)}<div className="mt-2 text-[10px] uppercase tracking-wide text-zinc-400">Revenue Made</div></div></Card>
+              <h2 className="text-center text-xl sm:text-2xl text-zinc-100 font-medium">Profit Made</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4 text-center">
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(revenue)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Revenue Made</div></div></Card>
+                <div className="text-2xl sm:text-3xl text-zinc-100">-</div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(payout)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Cost of the deal</div></div></Card>
+                <div className="text-2xl sm:text-3xl text-zinc-100">=</div>
+                <Card><div className="px-3 py-4 sm:px-4 sm:py-5 text-lg sm:text-xl font-semibold text-zinc-100">{formatCurrency(profit)}<div className="mt-2 text-[10px] sm:text-xs uppercase tracking-wide text-zinc-400">Revenue Made</div></div></Card>
               </div>
             </div>
           </div>
