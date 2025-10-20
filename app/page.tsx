@@ -69,7 +69,7 @@ export default function Home() {
           </h2>
 
           <h2 className="text-sm text-zinc-100">
-            <span className="italic"> - abhay & advaith</span>
+            <span className="italic"> - abhay, advaith & ethan</span>
           </h2>
 
           <h2 className="text-sm text-zinc-500">
