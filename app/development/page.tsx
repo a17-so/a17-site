@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Particles from "../components/particles";
+import Particles from "../../components/particles";
 
 const navigation = [
   { name: "abhay ->", href: "https://x.com/abhaychebium" },
@@ -51,26 +51,11 @@ export default function Home() {
           
 
           <h2 className="text-sm text-zinc-300">
-            we build, scale & acquire &nbsp;
-            <span className="italic text-zinc-200 font-bold text-md">consumer</span>
-            &nbsp;&nbsp;&nbsp;internet companies.
+            we take on projects where software can create&nbsp;
+            <span className="italic text-zinc-200 font-bold text-md">meaningful impact</span>
+            &nbsp;at scale.
           </h2>
 
-
-
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-
-          <h2 className="text-sm text-zinc-100">
-            <span className="italic"> - abhay, advaith & ethan</span>
-          </h2>
 
           <h2 className="text-sm text-zinc-500">
             a17 inc. © 2025
@@ -86,7 +71,7 @@ export default function Home() {
           </h2>
 
           <h2 className="text-sm text-zinc-700">
-            apply to join us <a href="mailto:abhay@a17.so" className="italic underline">here</a>.
+            talk to us <a href="mailto:abhay@a17.so" className="italic underline">here</a>.
           </h2>
 
         </div>
