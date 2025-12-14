@@ -1,5 +1,6 @@
 import React from "react";
 import Particles from "../../components/particles";
+import { Button } from "@/components/button";
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         quantity={100}
       />
       <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        a17
+        a17 development
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -19,22 +20,18 @@ export default function Home() {
 
         <div className="flex flex-col space-y-2">
 
-          <h2 className="text-sm text-zinc-300">
-            the &nbsp;<span className="italic text-zinc-200 font-bold text-md">consumer</span>&nbsp;&nbsp;&nbsp;everything company. starting with apps.
-          </h2>
-
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-          <h2 className="text-sm text-zinc-300">
-            {" "}
-          </h2>
-          
 
           <h2 className="text-sm text-zinc-300">
             we take on projects where software can create&nbsp;
             <span className="italic text-zinc-200 font-bold text-md">meaningful impact</span>
             &nbsp;at scale.
+          </h2>
+
+          <h2 className="text-sm text-zinc-300">
+            {" "}
+          </h2>
+          <h2 className="text-sm text-zinc-300">
+            {" "}
           </h2>
 
 
@@ -51,12 +48,12 @@ export default function Home() {
             {" "}
           </h2>
 
-          <h2 className="text-sm text-zinc-700">
-            talk to us <a href="mailto:abhay@a17.so" className="italic underline">here</a>.
-          </h2>
+          <Button asChild size="lg" className="bg-white text-black hover:bg-white/90 h-12 rounded-full">
+            <a href="mailto:abhay@a17.so">Talk to us →</a>
+          </Button>
 
         </div>
-        </div>
+      </div>
 
 
     </div>

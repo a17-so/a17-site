@@ -39,7 +39,7 @@ export default function Home() {
         <div className="flex flex-col space-y-2">
 
           <h2 className="text-sm text-zinc-300">
-            the &nbsp;<span className="italic text-zinc-200 font-bold text-md">consumer</span>&nbsp;&nbsp;&nbsp;everything company. starting with apps.
+            the &nbsp;<span className="italic text-zinc-200 font-bold text-md">consumer</span>&nbsp;&nbsp;everything company. starting with apps.
           </h2>
 
           <h2 className="text-sm text-zinc-300">
@@ -51,9 +51,7 @@ export default function Home() {
           
 
           <h2 className="text-sm text-zinc-300">
-            we build, scale & acquire &nbsp;
-            <span className="italic text-zinc-200 font-bold text-md">consumer</span>
-            &nbsp;&nbsp;&nbsp;internet companies.
+            we are building a family of iconic consumer products that enable everyone to live a better, more fulfilling, and more productive life. we are a small focused team of polymaths. we work to win
           </h2>
 
 
