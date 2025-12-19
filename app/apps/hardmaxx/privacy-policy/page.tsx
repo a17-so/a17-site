@@ -1,7 +1,7 @@
 // app/privacy/page.tsx (or wherever your route lives)
 import type { Metadata } from "next";
 import Link from "next/link";
-import Particles from "../../components/particles";
+import Particles from "@/components/particles";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | HardMaxx | A17 Labs LLC",

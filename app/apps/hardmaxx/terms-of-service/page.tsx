@@ -1,7 +1,7 @@
 // app/terms/page.tsx (or wherever your route lives)
 import type { Metadata } from "next";
 import Link from "next/link";
-import Particles from "../../components/particles";
+import Particles from "@/components/particles";
 
 export const metadata: Metadata = {
   title: "Terms of Service | HardMaxx | A17 Labs LLC",
@@ -152,3 +152,26 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Governing Law</h2>
             <p className="mt-3">
+              These Terms shall be governed and construed in accordance with the laws of the
+              State of Delaware, United States, without regard to its conflict of law provisions.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-zinc-100">Contact</h2>
+            <p className="mt-3">
+              Questions regarding these Terms? Email us at{" "}
+              <a
+                href="mailto:support@hardmaxx.app"
+                className="underline underline-offset-4"
+              >
+                support@hardmaxx.app
+              </a>
+              .
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
