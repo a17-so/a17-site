@@ -72,32 +72,42 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Face Data</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
-              <li>
-                <strong>Collection:</strong> We only collect the selfies you choose
-                to upload into the app. No additional biometric or facial
-                recognition data is collected.
-              </li>
-              <li>
-                <strong>Retention:</strong> Your selfies are retained until you
-                delete your account. Once deleted, your selfies are permanently
-                removed.
-              </li>
-              <li>
-                <strong>Use:</strong> Selfies are only used internally to provide
-                AI-powered makeup prediction and related features.
-              </li>
-              <li>
-                <strong>Sharing:</strong> Selfies may be processed through AI models
-                (such as OpenAI and Gemini) that are integrated into our own
-                servers and code. These models do not store your selfies, and the
-                data is not retained by OpenAI or Gemini.
-              </li>
-              <li>
-                <strong>No sale:</strong> We do not sell or disclose your selfies
-                to advertisers or unrelated third parties.
-              </li>
-            </ul>
+            <div className="mt-3 space-y-4">
+              <p>
+                A17 Labs provides features that allow you to upload photos (such
+                as selfies) for AI analysis. To protect your privacy, we adhere
+                to the following practices regarding face data:
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  <strong>Purpose:</strong> We store face data to provide a
+                  historical dashboard where users can track their visual
+                  progress over time and re-access AI analysis results.
+                </li>
+                <li>
+                  <strong>Retention:</strong> Face data is not stored
+                  indefinitely. It is automatically purged upon account deletion
+                  or after 24 months of account inactivity.
+                </li>
+                <li>
+                  <strong>Third-Party Sharing:</strong> To provide AI analysis,
+                  we share face data with our trusted AI partners, specifically{" "}
+                  <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
+                </li>
+                <li>
+                  <strong>Third-Party Practices:</strong> Our AI partners
+                  process this data ephemerally strictly for real-time analysis.
+                  They do not store face data on their servers, do not use it
+                  for model training, and do not retain it once the specific
+                  analysis request is completed.
+                </li>
+                <li>
+                  <strong>No Biometrics for Identification:</strong> We do not
+                  create or use biometric identifiers for the purpose of
+                  uniquely identifying or verifying any individual.
+                </li>
+              </ul>
+            </div>
           </section>
 
           <section>
@@ -114,8 +124,10 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-semibold text-zinc-100">Data Retention</h2>
             <p className="mt-3">
               We retain information for as long as necessary to provide the
-              Services, comply with legal obligations, resolve disputes, and
-              enforce our agreements.
+              Services, comply with legal obligations, and resolve disputes. As
+              noted above, specific data types like face data are subject to
+              automatic purging after 24 months of account inactivity or upon
+              account deletion.
             </p>
           </section>
 

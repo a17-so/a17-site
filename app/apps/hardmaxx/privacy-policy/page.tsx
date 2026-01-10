@@ -65,28 +65,44 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Face Data & Biometrics</h2>
-            <p className="mt-3">
-              HardMaxx may process photos you upload to provide analysis and educational
-              insights. We do <strong>not</strong> use your photos for identification and we
-              do <strong>not</strong> perform facial recognition.
-            </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
-              <li>
-                <strong>Collection:</strong> We only process images you choose to upload.
-              </li>
-              <li>
-                <strong>Not used for identification:</strong> We do not attempt to identify you
-                or match you to a real-world identity.
-              </li>
-              <li>
-                <strong>Biometric identifiers:</strong> We do not collect or store biometric
-                identifiers for the purpose of uniquely identifying you.
-              </li>
-              <li>
-                <strong>Purpose:</strong> Images are processed only to provide app functionality
-                (e.g., analysis, previews, or generated outputs).
-              </li>
-            </ul>
+            <div className="mt-3 space-y-4">
+              <p>
+                HardMaxx provides features that allow you to upload photos (such
+                as selfies) for AI analysis and visual insights. To protect your
+                privacy, we adhere to the following practices regarding face
+                data:
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  <strong>Purpose:</strong> We store face data to provide a
+                  historical dashboard where users can track their visual
+                  progress over time and re-access AI analysis results.
+                </li>
+                <li>
+                  <strong>Retention:</strong> Face data is not stored
+                  indefinitely. It is automatically purged upon account deletion
+                  or after 24 months of account inactivity.
+                </li>
+                <li>
+                  <strong>Third-Party Sharing:</strong> To provide AI analysis,
+                  we share face data with our trusted AI partners, specifically{" "}
+                  <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
+                </li>
+                <li>
+                  <strong>Third-Party Practices:</strong> Our AI partners
+                  process this data ephemerally strictly for real-time analysis.
+                  They do not store face data on their servers, do not use it
+                  for model training, and do not retain it once the specific
+                  analysis request is completed.
+                </li>
+                <li>
+                  <strong>No Biometrics for Identification:</strong> We do not
+                  create or use biometric identifiers for the purpose of
+                  uniquely identifying or verifying any individual. We do not
+                  perform facial recognition.
+                </li>
+              </ul>
+            </div>
           </section>
 
           <section>
@@ -143,12 +159,13 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-semibold text-zinc-100">Data Retention</h2>
             <p className="mt-3">
               We retain information only as long as necessary to provide the Services, comply
-              with legal obligations, resolve disputes, and enforce our agreements.
+              with legal obligations, and resolve disputes.
             </p>
             <ul className="mt-3 list-disc space-y-2 pl-6">
               <li>
-                <strong>Uploaded photos:</strong> retained only as long as needed for the
-                feature and/or your account settings. You may request deletion (see below).
+                <strong>Uploaded photos (Face Data):</strong> Face data is not stored
+                indefinitely. It is automatically purged upon account deletion
+                or after 24 months of account inactivity.
               </li>
               <li>
                 <strong>Logs & diagnostics:</strong> retained for a limited period for security
