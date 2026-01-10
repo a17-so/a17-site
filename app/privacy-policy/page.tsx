@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl text-zinc-100">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-zinc-500">Effective: August 25, 2025</p>
+        <p className="mt-3 text-sm text-zinc-500">Last Updated: January 10, 2026</p>
 
         <div className="mt-10 space-y-8 text-zinc-300">
           <section>
@@ -69,42 +69,41 @@ export default function PrivacyPolicyPage() {
               <li>Comply with legal obligations.</li>
             </ul>
           </section>
-
+          
           <section>
-            <h2 className="text-xl font-semibold text-zinc-100">Face Data</h2>
+            <h2 className="text-xl font-semibold text-zinc-100">Face Data Policy</h2>
             <div className="mt-3 space-y-4">
               <p>
                 A17 Labs provides features that allow you to upload photos (such
-                as selfies) for AI analysis. To protect your privacy, we adhere
-                to the following practices regarding face data:
+                as selfies) for AI analysis. We are committed to protecting your
+                privacy and strictly adhere to the following practices regarding face data:
               </p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Purpose:</strong> We store face data to provide a
-                  historical dashboard where users can track their visual
-                  progress over time and re-access AI analysis results.
+                  <strong>Collection and Use:</strong> We collect the images you upload strictly to provide the specific AI analysis or makeup prediction features you request.
                 </li>
                 <li>
-                  <strong>Retention:</strong> Face data is not stored
-                  indefinitely. It is automatically purged upon account deletion
-                  or after 24 months of account inactivity.
+                  <strong>Our Storage and Retention:</strong> If you choose to save your results, we store your face data to provide a historical dashboard where you can track progress. This data is automatically purged upon account deletion or after 24 months of account inactivity.
                 </li>
                 <li>
-                  <strong>Third-Party Sharing:</strong> To provide AI analysis,
-                  we share face data with our trusted AI partners, specifically{" "}
-                  <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
+                  <strong>Third-Party Sharing (AI Providers):</strong> To perform the analysis, we securely transmit your face data to our third-party cloud AI providers, specifically <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
                 </li>
                 <li>
-                  <strong>Third-Party Practices:</strong> Our AI partners
-                  process this data ephemerally strictly for real-time analysis.
-                  They do not store face data on their servers, do not use it
-                  for model training, and do not retain it once the specific
-                  analysis request is completed.
+                  <strong>Third-Party Storage and Retention Policies:</strong>
+                  <ul className="mt-2 list-[circle] pl-6 space-y-2 text-zinc-400">
+                    <li>
+                       <strong>Do third parties store your face data? No.</strong> Our agreements with these providers mandate zero-retention policies for API data.
+                    </li>
+                    <li>
+                       <strong>Retention Duration:</strong> Data sent to these providers is processed <strong>ephemerally</strong>. It is held in memory only for the few seconds required to generate the analysis and is immediately discarded thereafter.
+                    </li>
+                    <li>
+                       <strong>Usage Restrictions:</strong> Our third-party partners are strictly prohibited from using your face data to train their AI models, improve their services, or for any purpose other than fulfilling your specific request.
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <strong>No Biometrics for Identification:</strong> We do not
-                  create or use biometric identifiers for the purpose of
-                  uniquely identifying or verifying any individual.
+                  <strong>No Biometrics:</strong> We do not use face data to create biometric identifiers, nor do we use it for identification or authentication purposes.
                 </li>
               </ul>
             </div>
