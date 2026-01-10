@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
             href="/"
             className="text-sm text-zinc-400 hover:text-zinc-200 duration-200"
           >
-            ← Back to home
+            ← Back to home 
           </Link>
         </div>
 
