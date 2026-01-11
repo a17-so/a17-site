@@ -84,16 +84,37 @@ export default function PrivacyPolicyPage() {
                   or after 24 months of account inactivity.
                 </li>
                 <li>
-                  <strong>Third-Party Sharing:</strong> To provide AI analysis,
-                  we share face data with our trusted AI partners, specifically{" "}
-                  <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
+                  <strong>Third-Party Sharing & Storage:</strong> To provide AI
+                  analysis, we share face data with our trusted AI partners,
+                  specifically <strong>OpenAI</strong> and{" "}
+                  <strong>Google (Gemini)</strong>.
                 </li>
                 <li>
-                  <strong>Third-Party Practices:</strong> Our AI partners
-                  process this data ephemerally strictly for real-time analysis.
-                  They do not store face data on their servers, do not use it
-                  for model training, and do not retain it once the specific
-                  analysis request is completed.
+                  <strong>Third-Party Privacy Practices:</strong>
+                  <ul className="mt-2 list-[circle] pl-6 space-y-2 text-zinc-400">
+                    <li>
+                      <strong>Do third parties store your face data? No.</strong>{" "}
+                      Our agreements with these providers mandate
+                      zero-retention policies for API data. They do not store
+                      face data on their servers and do not use it for model
+                      training.
+                    </li>
+                    <li>
+                      <strong>Retention Duration:</strong> Data sent to these
+                      providers is processed <strong>ephemerally</strong>. It is
+                      held in memory only for the duration of the analysis
+                      request (typically 2-5 seconds) and is immediately
+                      discarded thereafter.
+                    </li>
+                    <li>
+                      <strong>Why they process data:</strong> These third
+                      parties provide the computational power required for
+                      advanced visual analysis (e.g., assessing facial symmetry
+                      or feature proportions). Ephemeral storage is the minimum
+                      required to compute the result and transmit it back to
+                      you.
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <strong>No Biometrics for Identification:</strong> We do not

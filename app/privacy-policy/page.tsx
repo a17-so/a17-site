@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
             href="/"
             className="text-sm text-zinc-400 hover:text-zinc-200 duration-200"
           >
-            ← Back to home 
+            ← Back to home
           </Link>
         </div>
 
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
               <li>Comply with legal obligations.</li>
             </ul>
           </section>
-          
+
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Face Data Policy</h2>
             <div className="mt-3 space-y-4">
@@ -86,19 +86,34 @@ export default function PrivacyPolicyPage() {
                   <strong>Our Storage and Retention:</strong> If you choose to save your results, we store your face data to provide a historical dashboard where you can track progress. This data is automatically purged upon account deletion or after 24 months of account inactivity.
                 </li>
                 <li>
-                  <strong>Third-Party Sharing (AI Providers):</strong> To perform the analysis, we securely transmit your face data to our third-party cloud AI providers, specifically <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
+                  <strong>Third-Party Sharing (AI Providers):</strong> To
+                  perform the analysis, we securely transmit your face data to
+                  our third-party cloud AI providers, specifically{" "}
+                  <strong>OpenAI</strong> and <strong>Google (Gemini)</strong>.
                 </li>
                 <li>
-                  <strong>Third-Party Storage and Retention Policies:</strong>
+                  <strong>Third-Party Storage and Practices:</strong>
                   <ul className="mt-2 list-[circle] pl-6 space-y-2 text-zinc-400">
                     <li>
-                       <strong>Do third parties store your face data? No.</strong> Our agreements with these providers mandate zero-retention policies for API data.
+                      <strong>Do third parties store your face data? No.</strong>{" "}
+                      Our agreements with these providers mandate
+                      zero-retention policies for API data. They do not store
+                      face data on their servers and do not use it for model
+                      training.
                     </li>
                     <li>
-                       <strong>Retention Duration:</strong> Data sent to these providers is processed <strong>ephemerally</strong>. It is held in memory only for the few seconds required to generate the analysis and is immediately discarded thereafter.
+                      <strong>Retention Duration:</strong> Data sent to these
+                      providers is processed <strong>ephemerally</strong>. It is
+                      held in memory only for the duration of the analysis
+                      request (typically 2-5 seconds) and is immediately
+                      discarded thereafter.
                     </li>
                     <li>
-                       <strong>Usage Restrictions:</strong> Our third-party partners are strictly prohibited from using your face data to train their AI models, improve their services, or for any purpose other than fulfilling your specific request.
+                      <strong>Why they process data:</strong> These third
+                      parties provide the computational power required for
+                      advanced visual analysis. Ephemeral storage is the minimum
+                      required to compute the results before the connection is
+                      closed.
                     </li>
                   </ul>
                 </li>
