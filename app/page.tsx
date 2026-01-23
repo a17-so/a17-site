@@ -48,10 +48,13 @@ export default function Home() {
           <h2 className="text-sm text-zinc-300">
             {" "}
           </h2>
-          
+
 
           <h2 className="text-sm text-zinc-300">
-            we are building a family of iconic consumer products that enable everyone to live a better, more fulfilling, and more productive life. we are a small focused team of polymaths. we work to win
+            we are building a family of iconic consumer products that enable everyone to live a better, more fulfilling, and more productive life.
+          </h2>
+          <h2 className="text-sm text-zinc-300">
+            we are a small focused team of polymaths. we work to win.
           </h2>
 
 
@@ -88,7 +91,7 @@ export default function Home() {
           </h2>
 
         </div>
-        </div>
+      </div>
 
 
     </div>
