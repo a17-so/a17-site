@@ -1,33 +1,23 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-
-
-export const metadata: Metadata = {
-  title: "Medical Disclaimer | HardMax | A17 Labs LLC",
-  description:
-    "Medical Disclaimer for the HardMax app by A17 Labs LLC (informational and entertainment purposes only).",
-};
 
 export default function MedicalDisclaimerPage() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-black text-white p-8">
       <div className="max-w-3xl w-full space-y-12">
-        {/* Header - Aligned with content */}
-        <div className="flex justify-start">
-          <Link
-            href="/"
-            className="text-3xl font-bold tracking-tight hover:text-zinc-300 transition-colors"
-          >
-            ← MEDICAL DISCLAIMER
-          </Link>
-        </div>
 
         {/* Content */}
         <div className="flex flex-col items-start justify-center space-y-8 py-12 text-zinc-300">
           <section>
-            <h1 className="text-4xl sm:text-5xl text-zinc-100 font-bold mb-4">Medical Disclaimer</h1>
+            <Link
+              href="/"
+              className="text-3xl text-zinc-100 font-bold mb-4 block hover:text-zinc-300 transition-colors tracking-tight"
+            >
+              ← MEDICAL DISCLAIMER
+            </Link>
             <p className="text-sm text-zinc-500">Effective: December 22, 2025</p>
           </section>
+
+
 
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Read This First</h2>

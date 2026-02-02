@@ -1,11 +1,4 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-
-
-export const metadata: Metadata = {
-  title: "Privacy Policy | A17 Labs LLC",
-  description: "Privacy Policy for A17 Labs LLC",
-};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -16,7 +9,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <Link
               href="/"
-              className="text-4xl sm:text-5xl text-zinc-100 font-bold mb-4 block hover:text-zinc-300 transition-colors tracking-tight"
+              className="text-3xl text-zinc-100 font-bold mb-4 block hover:text-zinc-300 transition-colors tracking-tight"
             >
               ← PRIVACY POLICY
             </Link>

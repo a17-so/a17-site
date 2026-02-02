@@ -5,23 +5,26 @@ import { XLogo, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react/dist/s
 
 export function GlobalNav() {
     const pathname = usePathname();
-    const hiddenRoutes = ["/terms", "/privacy"];
+    const hiddenRoutes = ["/terms", "/privacy", "/medical"];
 
     if (hiddenRoutes.includes(pathname)) {
         return null;
     }
 
+    const isHomePage = pathname === "/";
+    const navClasses = isHomePage ? "opacity-0 animate-nav-fade-in" : "";
+
     return (
         <>
             {/* Top Left - Email */}
-            <div className="fixed top-8 left-10 z-50">
+            <div className={`fixed top-8 left-10 z-50 ${navClasses}`}>
                 <a href="mailto:hello@a17.so" className="text-xs font-bold text-zinc-200 hover:text-zinc-400 transition-colors">
                     HELLO@A17.SO
                 </a>
             </div>
 
             {/* Top Right - Socials */}
-            <div className="fixed top-8 right-10 z-50 flex items-center gap-4">
+            <div className={`fixed top-8 right-10 z-50 flex items-center gap-4 ${navClasses}`}>
                 <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
                     <XLogo className="w-5 h-5" weight="fill" />
                 </a>
@@ -34,7 +37,7 @@ export function GlobalNav() {
             </div>
 
             {/* Bottom Left Corner & Nav */}
-            <div className="fixed bottom-8 left-10 z-50 flex items-end gap-0">
+            <div className={`fixed bottom-8 left-10 z-50 flex items-end gap-0 ${navClasses}`}>
                 <nav className="flex gap-4 text-xs font-bold text-zinc-200">
                     <a href="mailto:hello@a17.so" className="hover:text-zinc-400 transition-colors">CAREERS</a>
                     <span className="text-zinc-700 mx-1">•</span>
@@ -49,7 +52,7 @@ export function GlobalNav() {
             </div>
 
             {/* Bottom Right Corner & Location */}
-            <div className="fixed bottom-8 right-10 z-50 flex items-end justify-end gap-0">
+            <div className={`fixed bottom-8 right-10 z-50 flex items-end justify-end gap-0 ${navClasses}`}>
                 <span className="text-xs font-bold text-white">SEATTLE, WA</span>
             </div>
         </>
