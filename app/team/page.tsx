@@ -1,64 +1,77 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Card, CardTitle, CardDescription } from "../../components/card";
-import Particles from "../../components/particles";
+import React from "react";
 
 const team = [
     {
-        name: "BLAKE ANDERSON",
+        name: "ABHAY CHEBIUM",
         role: "CEO",
-        image: "/placeholder-blake.jpg", // Placeholder
+        image: "https://pbs.twimg.com/profile_images/1979772350561144832/MZhwrdpB_400x400.jpg",
+        link: "https://x.com/abhaychebium",
     },
     {
-        name: "BENJAMIN CHEN",
+        name: "ADVAITH AKELLA",
         role: "COO",
-        image: "/placeholder-ben-c.jpg", // Placeholder
+        image: "https://pbs.twimg.com/profile_images/1950106474870452224/Covo9OaM_400x400.jpg",
+        link: "https://x.com/advaithakella",
     },
     {
-        name: "BEN WANG",
+        name: "ETHAN LEONARD",
         role: "PRODUCT",
-        image: "/placeholder-ben-w.jpg", // Placeholder
+        image: "https://pbs.twimg.com/profile_images/1959111889071611905/2cTNhYaY_400x400.jpg",
+        link: "https://x.com/_eth0n",
     },
     {
-        name: "JAY GUPTA",
-        role: "ENGINEER",
-        image: "/placeholder-jay.jpg", // Placeholder
+        name: "EKAM MEHAT",
+        role: "GROWTH",
+        image: "/ekam.jpg",
+        link: "https://x.com/EkamMehat",
     },
 ];
 
 export default function TeamPage() {
     return (
-        <div className="relative min-h-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black text-white p-8 md:p-24 font-mono overflow-auto pb-32">
-            <Particles
-                className="absolute inset-0 -z-10"
-                quantity={100}
-            />
-            <div className="max-w-4xl mx-auto space-y-12">
-
-                {/* Header */}
-                <div className="space-y-4">
-                    <Link href="/" className="inline-flex items-center text-xl hover:text-zinc-300 transition-colors">
-                        <span className="mr-2">←</span> TEAM
+        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-8 overflow-hidden">
+            <div className="max-w-3xl w-full space-y-12">
+                {/* Header - Aligned with content */}
+                <div className="flex justify-start">
+                    <Link
+                        href="/"
+                        className="text-3xl font-bold tracking-tight hover:text-zinc-300 transition-colors"
+                    >
+                        ← TEAM
                     </Link>
                 </div>
 
-                {/* Team Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                {/* Content - Constrained Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {team.map((member) => (
-                        <div key={member.name} className="group space-y-4">
-                            {/* Image Placeholder with Grayscale/Dither effect simulation */}
-                            <div className="aspect-square bg-zinc-900 border border-zinc-800 grayscale overflow-hidden relative">
-                                {/* In real implementation, use next/image here */}
-                                <div className="absolute inset-0 bg-neutral-800 animate-pulse" />
+                        <Link
+                            key={member.name}
+                            href={member.link}
+                            target="_blank"
+                            className="flex flex-col space-y-4 group"
+                        >
+                            {/* Image Placeholder */}
+                            <div className="aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
 
+                            {/* Info */}
                             <div className="space-y-1">
-                                <p className="text-xs font-bold tracking-wider text-zinc-100 uppercase">{member.name}</p>
-                                <p className="text-[10px] text-zinc-500 uppercase tracking-widest">// {member.role}</p>
+                                <h3 className="text-sm font-bold tracking-wider">{member.name}</h3>
+                                <p className="text-zinc-500 text-[10px] tracking-widest font-mono uppercase">
+                                    // {member.role}
+                                </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
-
             </div>
         </div>
     );

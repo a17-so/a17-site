@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Particles from "../../components/particles";
+
 
 export const metadata: Metadata = {
   title: "Privacy Policy | A17 Labs LLC",
@@ -9,23 +9,20 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <Particles className="absolute inset-0 -z-10" quantity={80} />
+    <div className="flex flex-col items-center min-h-screen bg-black text-white p-8">
+      <div className="max-w-3xl w-full space-y-12">
+        {/* Content */}
+        <div className="flex flex-col items-start justify-center space-y-8 py-12 text-zinc-300">
+          <section>
+            <Link
+              href="/"
+              className="text-4xl sm:text-5xl text-zinc-100 font-bold mb-4 block hover:text-zinc-300 transition-colors tracking-tight"
+            >
+              ← PRIVACY POLICY
+            </Link>
+            <p className="text-sm text-zinc-500">Last Updated: January 10, 2026</p>
+          </section>
 
-      <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
-        <div className="mb-10">
-          <Link
-            href="/"
-            className="text-sm text-zinc-400 hover:text-zinc-200 duration-200"
-          >
-            ← Back to home
-          </Link>
-        </div>
-
-        <h1 className="text-4xl sm:text-5xl text-zinc-100">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-zinc-500">Last Updated: January 10, 2026</p>
-
-        <div className="mt-10 space-y-8 text-zinc-300">
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Overview</h2>
             <p className="mt-3">
