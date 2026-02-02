@@ -46,13 +46,15 @@ export function GlobalNav() {
                     <a href="/portfolio" className="hover:text-zinc-400 transition-colors">PORTFOLIO</a>
                     <span className="text-zinc-700 mx-1">•</span>
                     <a href="/team" className="hover:text-zinc-400 transition-colors">TEAM</a>
-                    <span className="text-zinc-700 mx-1">•</span>
-                    <a href="/office" className="hover:text-zinc-400 transition-colors">OFFICE</a>
+                    <span className="hidden sm:flex sm:gap-4">
+                        <span className="text-zinc-700 mx-1">•</span>
+                        <a href="/office" className="hover:text-zinc-400 transition-colors">OFFICE</a>
+                    </span>
                 </nav>
             </div>
 
             {/* Bottom Right Corner & Location */}
-            <div className={`fixed bottom-8 right-10 z-50 flex items-end justify-end gap-0 ${navClasses}`}>
+            <div className={`fixed bottom-8 right-10 z-50 items-end justify-end gap-0 ${navClasses} hidden sm:flex`}>
                 <span className="text-xs font-bold text-white">SEATTLE, WA</span>
             </div>
         </>

@@ -31,7 +31,7 @@ const team = [
 
 export default function TeamPage() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-8 overflow-hidden">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-8 pt-24 sm:pt-8 overflow-hidden">
             <div className="max-w-3xl w-full space-y-12">
                 {/* Header - Aligned with content */}
                 <div className="flex justify-start">
