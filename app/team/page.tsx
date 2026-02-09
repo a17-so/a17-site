@@ -24,7 +24,7 @@ const team = [
     {
         name: "EKAM MEHAT",
         role: "GROWTH",
-        image: "/ekam.jpg",
+        image: "",
         link: "https://x.com/EkamMehat",
     },
 ];
@@ -54,12 +54,16 @@ export default function TeamPage() {
                         >
                             {/* Image Placeholder */}
                             <div className="aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                                <Image
-                                    src={member.image}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover"
-                                />
+                                {member.image ? (
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full bg-white" />
+                                )}
                             </div>
 
                             {/* Info */}
