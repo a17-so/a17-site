@@ -4,10 +4,10 @@ import React from "react";
 
 const apps = [
     {
-        name: "HARDMAXX",
+        name: "REGEN",
         description: "AI Peptide Transformation App (1M Revenue, 500k downloads)",
-        link: "https://apps.apple.com/us/app/hardmaxx-transform-now/id6756548399",
-        image: "/apps/HARDMAXX.png",
+        link: "https://apps.apple.com/us/app/regen-build-your-cycle/id6756548399",
+        image: "/apps/REGEN.png",
     },
     {
         name: "PRETTI",

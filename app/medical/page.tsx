@@ -187,10 +187,10 @@ export default function MedicalDisclaimerPage() {
             <p className="mt-3">
               Questions about this Medical Disclaimer? Email us at{" "}
               <a
-                href="mailto:support@hardmaxx.app"
+                href="mailto:support@regen.app"
                 className="underline underline-offset-4"
               >
-                support@hardmaxx.app
+                support@regen.app
               </a>{" "}
               or visit our{" "}
               <Link href="/support" className="underline underline-offset-4">
