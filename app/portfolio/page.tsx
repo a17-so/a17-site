@@ -41,7 +41,7 @@ export default function PortfolioPage() {
                             className="flex flex-col space-y-4 group"
                         >
                             {/* Image Placeholder */}
-                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${app.name === "HARDMAXX" ? "opacity-80 hover:opacity-100" : ""}`}>
+                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${app.name === "REGEN" ? "opacity-80 hover:opacity-100" : ""}`}>
                                 <Image
                                     src={app.image}
                                     alt={app.name}

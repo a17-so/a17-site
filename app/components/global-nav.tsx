@@ -5,7 +5,7 @@ import { XLogo, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react/dist/s
 
 export function GlobalNav() {
     const pathname = usePathname();
-    const hiddenRoutes = ["/terms", "/privacy", "/medical"];
+    const hiddenRoutes = ["/terms", "/privacy", "/regen/medical"];
 
     if (hiddenRoutes.includes(pathname)) {
         return null;

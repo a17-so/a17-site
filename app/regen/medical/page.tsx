@@ -22,7 +22,7 @@ export default function MedicalDisclaimerPage() {
           <section>
             <h2 className="text-xl font-semibold text-zinc-100">Read This First</h2>
             <p className="mt-3">
-              HardMax (the &quot;App&quot;) is provided by A17 Labs LLC (&quot;A17 Labs,&quot;
+              Regen (the &quot;App&quot;) is provided by A17 Labs LLC (&quot;A17 Labs,&quot;
               &quot;we,&quot; &quot;us&quot;). The App and any content, features, outputs,
               suggestions, estimates, analyses, or other information provided through it
               (collectively, the &quot;Content&quot;) are offered strictly for{" "}
