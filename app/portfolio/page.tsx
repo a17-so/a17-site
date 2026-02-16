@@ -5,13 +5,19 @@ import React from "react";
 const apps = [
     {
         name: "REGEN",
-        description: "AI Peptide Transformation App (1M Revenue, 500k downloads)",
+        description: "Science-Based AI Peptide Transformation App (just launched)",
         link: "https://apps.apple.com/us/app/regen-build-your-cycle/id6756548399",
         image: "/apps/REGEN.png",
     },
     {
+        name: "LIFEMAXX",
+        description: "Character-Based Self Improvement App (70k downloads)",
+        link: "https://apps.apple.com/us/app/lifemaxx-88-days/id6742798149",
+        image: "/apps/lifemaxx.png",
+    },
+    {
         name: "PRETTI",
-        description: "AI Makeup Assitant (200k Revenue, 300k downloads)",
+        description: "AI Makeup Assistant (10k downloads)",
         link: "https://apps.apple.com/us/app/pretti-ai-makeup-assistant/id6749188903",
         image: "/apps/pretti.png",
     },
