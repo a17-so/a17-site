@@ -7,25 +7,21 @@ const team = [
         name: "ABHAY CHEBIUM",
         role: "CEO",
         image: "https://pbs.twimg.com/profile_images/1979772350561144832/MZhwrdpB_400x400.jpg",
-        link: "https://x.com/abhaychebium",
     },
     {
         name: "ADVAITH AKELLA",
         role: "COO",
-        image: "https://pbs.twimg.com/profile_images/1950106474870452224/Covo9OaM_400x400.jpg",
-        link: "https://x.com/advaithakella",
+        image: "https://pbs.twimg.com/profile_images/2025769390810238976/uUirzSx2_400x400.jpg",
     },
     {
         name: "ETHAN LEONARD",
         role: "PRODUCT",
         image: "https://pbs.twimg.com/profile_images/1959111889071611905/2cTNhYaY_400x400.jpg",
-        link: "https://x.com/_eth0n",
     },
     {
         name: "EKAM MEHAT",
         role: "GROWTH",
-        image: "",
-        link: "https://x.com/EkamMehat",
+        image: "https://pbs.twimg.com/profile_images/2034805968295665666/6vAuqHPG_400x400.jpg",
     },
 ];
 
@@ -44,27 +40,21 @@ export default function TeamPage() {
                     </Link>
                 </div>
 
-                {/* Content - Constrained Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Content - Horizontal Scroll */}
+                <div className="flex gap-6 overflow-x-auto pb-4 snap-x">
                     {team.map((member) => (
-                        <Link
+                        <div
                             key={member.name}
-                            href={member.link}
-                            target="_blank"
-                            className="flex flex-col space-y-4 group"
+                            className="flex-none w-64 md:w-80 flex flex-col space-y-4 group snap-center"
                         >
                             {/* Image Placeholder */}
                             <div className="aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                                {member.image ? (
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                ) : (
-                                    <div className="w-full h-full bg-white" />
-                                )}
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
 
                             {/* Info */}
@@ -74,7 +64,7 @@ export default function TeamPage() {
                                     // {member.role}
                                 </p>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
             </div>
