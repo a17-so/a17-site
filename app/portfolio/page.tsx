@@ -4,8 +4,8 @@ import React from "react";
 
 const apps = [
     {
-        name: "REGEN",
-        description: "Science-Based AI Peptide Transformation App (just launched)",
+        name: "XXXXXXXXXXXXXXXXXXXX",
+        description: "Science-based AI X, X, X (just launched)",
         link: "https://apps.apple.com/us/app/regen-build-your-cycle/id6756548399",
         image: "/apps/REGEN.png",
     },
@@ -42,13 +42,13 @@ export default function PortfolioPage() {
                 <div className="flex gap-6 overflow-x-auto pb-4 snap-x">
                     {apps.map((app) => (
                         <Link
-                            key={app.name}
+                            key={app.image}
                             href={app.link}
                             target="_blank"
                             className="flex-none w-64 md:w-80 flex flex-col space-y-4 group snap-center"
                         >
                             {/* Image Placeholder */}
-                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${app.name === "REGEN" ? "opacity-80 hover:opacity-100" : ""}`}>
+                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${app.image === "/apps/REGEN.png" ? "opacity-80 hover:opacity-100" : ""}`}>
                                 <Image
                                     src={app.image}
                                     alt={app.name}
