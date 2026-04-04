@@ -4,9 +4,9 @@ import React from "react";
 
 const apps = [
     {
-        name: "XXXXXXXXXXXXXXXXXXXX",
-        description: "Science-based AI X, X, X (just launched)",
-        link: "https://apps.apple.com/us/app/regen-build-your-cycle/id6756548399",
+        name: "XXXXX",
+        description: "Science-based AI XXXXXXX app (just launched)",
+        link: "",
         image: "/apps/REGEN.png",
     },
     {
