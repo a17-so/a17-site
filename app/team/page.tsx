@@ -9,20 +9,15 @@ const team = [
         image: "https://pbs.twimg.com/profile_images/1979772350561144832/MZhwrdpB_400x400.jpg",
     },
     {
-        name: "ADVAITH AKELLA",
-        role: "COO",
-        image: "https://pbs.twimg.com/profile_images/2025769390810238976/uUirzSx2_400x400.jpg",
-    },
-    {
-        name: "ETHAN LEONARD",
-        role: "PRODUCT",
-        image: "https://pbs.twimg.com/profile_images/1959111889071611905/2cTNhYaY_400x400.jpg",
-    },
-    {
         name: "EKAM MEHAT",
-        role: "GROWTH",
+        role: "COO",
         image: "https://pbs.twimg.com/profile_images/2034805968295665666/6vAuqHPG_400x400.jpg",
     },
+    {
+        name: "ADVAITH AKELLA",
+        role: "PRODUCT",
+        image: "https://pbs.twimg.com/profile_images/2025769390810238976/uUirzSx2_400x400.jpg",
+    }
 ];
 
 
