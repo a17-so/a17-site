@@ -2,12 +2,6 @@ import Link from "next/link";
 import React from "react";
 import Particles from "../components/particles";
 
-const navigation = [
-  { name: "abhay ->", href: "https://x.com/abhaychebium" },
-  { name: "advaith ->", href: "https://x.com/advaithakella" },
-  { name: "ethan ->", href: "https://x.com/_eth0n" },
-];
-
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">

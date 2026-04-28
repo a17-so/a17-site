@@ -25,13 +25,13 @@ export function GlobalNav() {
 
             {/* Top Right - Socials */}
             <div className={`fixed top-8 right-10 z-50 flex items-center gap-4 ${navClasses}`}>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
+                <a href="https://x.com/abhaychebium" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
                     <XLogo className="w-5 h-5" weight="fill" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
+                <a href="https://www.linkedin.com/in/abhay-chebium" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
                     <LinkedinLogo className="w-5 h-5" weight="fill" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
+                <a href="https://instagram.com/abhaychebium" target="_blank" rel="noopener noreferrer" className="text-zinc-200 hover:text-zinc-400 transition-colors">
                     <InstagramLogo className="w-5 h-5" weight="fill" />
                 </a>
             </div>
