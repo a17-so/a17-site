@@ -6,17 +6,20 @@ const team = [
     {
         name: "ABHAY CHEBIUM",
         role: "CEO",
-        image: "https://pbs.twimg.com/profile_images/1979772350561144832/MZhwrdpB_400x400.jpg",
+        image: "https://pbs.twimg.com/profile_images/2063806571906543616/ql9kOCNc_400x400.jpg",
+        link: "https://x.com/abhaychebium",
     },
     {
         name: "EKAM MEHAT",
         role: "COO",
-        image: "https://pbs.twimg.com/profile_images/2034805968295665666/6vAuqHPG_400x400.jpg",
+        image: "https://pbs.twimg.com/profile_images/2079302115965771776/maN2D2Yz_400x400.jpg",
+        link: "https://x.com/ekammehat",
     },
     {
         name: "ADVAITH AKELLA",
         role: "PRODUCT",
         image: "https://pbs.twimg.com/profile_images/2025769390810238976/uUirzSx2_400x400.jpg",
+        link: "https://x.com/advaithakella",
     }
 ];
 
@@ -38,8 +41,10 @@ export default function TeamPage() {
                 {/* Content - Horizontal Scroll */}
                 <div className="flex gap-6 overflow-x-auto pb-4 snap-x">
                     {team.map((member) => (
-                        <div
+                        <Link
                             key={member.name}
+                            href={member.link}
+                            target="_blank"
                             className="flex-none w-64 md:w-80 flex flex-col space-y-4 group snap-center"
                         >
                             {/* Image Placeholder */}
@@ -59,7 +64,7 @@ export default function TeamPage() {
                                     // {member.role}
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

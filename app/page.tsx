@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "../components/particles";
+import { ScrollLock } from "./components/scroll-lock";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <ScrollLock />
       {/* Navigation removed, moved to layout */}
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <Particles

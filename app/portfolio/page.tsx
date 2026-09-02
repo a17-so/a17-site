@@ -4,15 +4,15 @@ import React from "react";
 
 const apps = [
     {
-        name: "XXXXX",
-        description: "Science-based AI XXXXXXX app (just launched)",
-        link: "",
+        name: "REGEN",
+        description: "The Personalized Peptide Care App (just launched)",
+        link: "https://www.regenhealth.app/",
         image: "/apps/REGEN.png",
     },
     {
         name: "LIFEMAXX",
         description: "Character-Based Self Improvement App (70k downloads)",
-        link: "https://apps.apple.com/us/app/lifemaxx-88-days/id6742798149",
+        link: "",
         image: "/apps/lifemaxx.png",
     },
     {
@@ -40,15 +40,19 @@ export default function PortfolioPage() {
                 {/* Content - Constrained Grid */}
                 {/* Content - Horizontal Scroll */}
                 <div className="flex gap-6 overflow-x-auto pb-4 snap-x">
-                    {apps.map((app) => (
-                        <Link
+                    {apps.map((app) => {
+                        const Wrapper = app.link ? Link : "div";
+                        const wrapperProps = app.link
+                            ? { href: app.link, target: "_blank" }
+                            : {};
+                        return (
+                        <Wrapper
                             key={app.image}
-                            href={app.link}
-                            target="_blank"
+                            {...(wrapperProps as any)}
                             className="flex-none w-64 md:w-80 flex flex-col space-y-4 group snap-center"
                         >
                             {/* Image Placeholder */}
-                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${app.image === "/apps/REGEN.png" ? "opacity-80 hover:opacity-100" : ""}`}>
+                            <div className={`aspect-square bg-zinc-800 w-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500 rounded-sm ${!app.link ? "opacity-60 hover:opacity-100" : ""}`}>
                                 <Image
                                     src={app.image}
                                     alt={app.name}
@@ -64,8 +68,9 @@ export default function PortfolioPage() {
                                     // {app.description}
                                 </p>
                             </div>
-                        </Link>
-                    ))}
+                        </Wrapper>
+                        );
+                    })}
                 </div>
             </div>
         </div>

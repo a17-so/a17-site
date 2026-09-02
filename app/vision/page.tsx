@@ -26,13 +26,6 @@ export default function VisionPage() {
                     <h2 className="text-sm text-zinc-300 leading-relaxed">
                         we are building a family of iconic consumer products that enable everyone to live a better, more fulfilling, and more productive life.
                     </h2>
-                    <h2 className="text-sm text-zinc-300 leading-relaxed">
-                        we are a small focused team of polymaths. we work to win.
-                    </h2>
-
-                    <h2 className="text-sm text-zinc-100">
-                        <span className="italic"> - abhay</span>
-                    </h2>
                 </div>
             </div>
         </div>

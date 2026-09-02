@@ -46,10 +46,6 @@ export function GlobalNav() {
                     <a href="/portfolio" className="hover:text-zinc-400 transition-colors">PORTFOLIO</a>
                     <span className="text-zinc-700 mx-1">•</span>
                     <a href="/team" className="hover:text-zinc-400 transition-colors">TEAM</a>
-                    <span className="hidden sm:flex sm:gap-4">
-                        <span className="text-zinc-700 mx-1">•</span>
-                        <a href="/office" className="hover:text-zinc-400 transition-colors">OFFICE</a>
-                    </span>
                 </nav>
             </div>
 
