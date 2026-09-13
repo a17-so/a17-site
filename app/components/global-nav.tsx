@@ -6,8 +6,9 @@ import { XLogo, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react/dist/s
 export function GlobalNav() {
     const pathname = usePathname();
     const hiddenRoutes = ["/terms", "/privacy", "/apps/regen/medical-disclaimer"];
+    const isStudio = pathname === "/studio" || pathname.startsWith("/studio/");
 
-    if (hiddenRoutes.includes(pathname)) {
+    if (hiddenRoutes.includes(pathname) || isStudio) {
         return null;
     }
 
@@ -46,6 +47,8 @@ export function GlobalNav() {
                     <a href="/portfolio" className="hover:text-zinc-400 transition-colors">PORTFOLIO</a>
                     <span className="text-zinc-700 mx-1">•</span>
                     <a href="/team" className="hover:text-zinc-400 transition-colors">TEAM</a>
+                    <span className="text-zinc-700 mx-1">•</span>
+                    <a href="/studio" className="hover:text-zinc-400 transition-colors">STUDIO</a>
                 </nav>
             </div>
 

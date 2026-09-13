@@ -43,8 +43,19 @@ module.exports = {
 				"fade-left": "fade-left 3s ease-in-out forwards",
 				"fade-right": "fade-right 3s ease-in-out forwards",
 				"nav-fade-in": "nav-fade-in 4s ease-in-out forwards",
+				"fade-up": "fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"fade-in-fast": "fade-in-fast 2s ease-in-out forwards",
 			},
 			keyframes: {
+				"fade-up": {
+					"0%": { opacity: "0", transform: "translateY(24px)", filter: "blur(6px)" },
+					"100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
+				},
+				"fade-in-fast": {
+					"0%": { opacity: "0" },
+					"40%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
 				"nav-fade-in": {
 					"0%": {
 						opacity: "0",

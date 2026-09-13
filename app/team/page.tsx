@@ -14,12 +14,6 @@ const team = [
         role: "COO",
         image: "https://pbs.twimg.com/profile_images/2079302115965771776/maN2D2Yz_400x400.jpg",
         link: "https://x.com/ekammehat",
-    },
-    {
-        name: "ADVAITH AKELLA",
-        role: "PRODUCT",
-        image: "https://pbs.twimg.com/profile_images/2025769390810238976/uUirzSx2_400x400.jpg",
-        link: "https://x.com/advaithakella",
     }
 ];
 
