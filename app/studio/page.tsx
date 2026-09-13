@@ -215,8 +215,9 @@ export default function StudioPage() {
                         </Link>
                     </Reveal>
                     <Reveal delay={150}>
-                        <h1 className="mt-10 font-bold text-4xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tighter max-w-4xl">
-                            We&apos;ll build your idea into a ready to launch MVP in 2 weeks
+                        <h1 className="mt-10 font-bold text-4xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tighter">
+                            We&apos;ll build your idea into a<br className="hidden lg:block" />
+                            {" "}ready to launch MVP in 2-weeks
                         </h1>
                     </Reveal>
                     <Reveal delay={350}>
@@ -295,7 +296,7 @@ export default function StudioPage() {
                             const wrapperProps = app.link ? { href: app.link, target: "_blank" } : {};
                             return (
                                 <Wrapper key={app.name} {...wrapperProps} className="group flex flex-col gap-4">
-                                    <div className="aspect-square w-full overflow-hidden relative rounded-md bg-zinc-900 grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    <div className="aspect-square w-full overflow-hidden relative rounded-md bg-zinc-900 transition-transform duration-500 group-hover:scale-[1.02]">
                                         <Image src={app.image} alt={app.name} fill className="object-cover" />
                                     </div>
                                     <div className="space-y-1">
